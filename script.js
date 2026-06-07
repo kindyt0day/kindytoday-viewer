@@ -1,4 +1,4 @@
-window.viewerMode = true;
+
 /* ========================= */
 /* CURSOR */
 /* ========================= */
@@ -3854,38 +3854,7 @@ if(importArchiveButton){
   };
 
 }
-fetch("archive-viewer.json")
-.then(r=>r.json())
-.then(data=>{
 
-window.viewerMode = true;
-
-document.body.classList.add(
-"viewer-mode"
-);
-
-Object.assign(
-archiveData,
-data.archiveData || {}
-);
-
-characters.length = 0;
-characters.push(
-...(data.characters || [])
-);
-
-projects.length = 0;
-projects.push(
-...(data.projects || [])
-);
-
-applyArchiveData();
-
-renderCharacters();
-
-renderProjects();
-
-});
 if(importArchiveFile){
 
   importArchiveFile.onchange =
@@ -5202,35 +5171,3 @@ ${link.value}
 });
 
 }
-fetch("archive-viewer.json")
-.then(r=>r.json())
-.then(data=>{
-
-window.viewerMode = true;
-
-document.body.classList.add(
-"viewer-mode"
-);
-
-Object.assign(
-archiveData,
-data.archiveData || {}
-);
-
-characters.length = 0;
-characters.push(
-...(data.characters || [])
-);
-
-projects.length = 0;
-projects.push(
-...(data.projects || [])
-);
-
-applyArchiveData();
-
-renderCharacters();
-
-renderProjects();
-
-});
