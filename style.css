@@ -4709,3 +4709,9 @@ display:none !important;
 .viewer-mode [data-tab="edit"]{
 display:none !important;
 }
+.viewer-mode .edit-category,
+.viewer-mode .delete-category,
+.viewer-mode .setting-page-edit,
+.viewer-mode .setting-page-delete{
+display:none !important;
+}
